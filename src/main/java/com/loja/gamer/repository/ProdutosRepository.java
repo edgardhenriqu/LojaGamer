@@ -5,14 +5,14 @@ import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.loja.gamer.model.Produtos;
+import com.loja.gamer.model.Produto;
 
-public interface ProdutosRepository extends JpaRepository<Produtos, Long> {
+public interface ProdutosRepository extends JpaRepository<Produto, Long> {
 	
-	public List<Produtos> findByNomeContainingIgnoreCase(String nome);
+	public List<Produto> findByNomeContainingIgnoreCase(String nome);
 	
-	public List<Produtos> findByPrecoGreaterThanOrderByPreco(BigDecimal preco);
+	public List<Produto> findByPrecoGreaterThanOrderByPreco(BigDecimal preco);
 	
-	public List<Produtos> findByPrecoLessThanOrderByPreco(BigDecimal preco);
+	public List<Produto> findByPrecoLessThanOrderByPreco(BigDecimal preco);
 
 }
